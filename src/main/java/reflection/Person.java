@@ -1,37 +1,63 @@
 package reflection;
 
-public class Person {
+public class Person implements Interface {
     private String name = "Sasha";
     private int age = 25;
-    private boolean gay = true;
+    private boolean white = true;
 
 
-    public void sayHello() {
-        System.out.println("Aloha!");
+    public void firstPublicMethodsWithoutParameters() {
+        System.out.println(" You call first methods without parameters !");
     }
 
-    public void sayBay() {
-        System.out.println("See you!");
+    public void secondPublicMethodsWithoutParameters() {
+        System.out.println(" You call second methods without parameters !");
     }
 
-    final void yo() {
-        System.out.println("yo Man!");
+    final void finalMethod1() {
     }
 
-    final void sayRap() {
-        System.out.println("Tag Life!");
+    final void finalMethod2() {
     }
 
-    final void sa() {
-        System.out.println("Tag Life!");
+    final void finalMethod3() {
     }
 
-    static void kj() {
+    static void staticMethod() {
     }
 
-    private void uk() {
+    private void privateMethod() {
     }
 
+    public void methodWithParameters(String name){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Person{"
+                + "name = '" + name + '\''
+                + ", age = " + age
+                + ", white = " + white
+                + '}';
+    }
+
+    @Override
+    public String methodFromInterface() {
+        return "Hi! Im from Interface !";
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean getGender() {
+        return white;
+    }
 }
 
 
